@@ -25,7 +25,7 @@ body {
 .title span {
   color: #fff;
 }
-
+.status2,
 .status-action {
   display: flex;
   margin-top: 25px;
@@ -38,14 +38,19 @@ body {
   color: #fff;
 }
 
-.reset {
+.reset,.start {
   cursor: pointer;
 }
-
+.start:hover {
+  color: #fff;
+}
 .reset:hover {
   color: #fff;
 }
-
+.playerXcomputer:hover,
+.playerXplayer:hover {
+  color: #fff;
+}
 .the-board {
   background: #2c3e50;
   display: grid;
