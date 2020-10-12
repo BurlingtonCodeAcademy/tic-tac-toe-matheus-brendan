@@ -38,7 +38,12 @@ body {
   color: #fff;
 }
 
-.reset,.start {
+.reset,
+.start,
+.playX,
+.playO,
+.playerXcomputer,
+.playerXplayer {
   cursor: pointer;
 }
 .start:hover {
@@ -47,6 +52,8 @@ body {
 .reset:hover {
   color: #fff;
 }
+.playX:hover,
+.playO:hover,
 .playerXcomputer:hover,
 .playerXplayer:hover {
   color: #fff;
@@ -61,13 +68,13 @@ body {
 }
 
 .game-Cell {
-  background:#34495e;
+  background: #34495e;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   height: 200px;
   width: 200px;
-  font-size:100px;
+  font-size: 100px;
   color: #fff;
 }
