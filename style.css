@@ -1,32 +1,32 @@
-* {
+* { /*This is removing margin and padding of the page*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
+body { /* Setting the body sytyle*/
   color: black;
   display: flex;
   font-family: sans-serif;
   justify-content: center;
 }
 
-.container {
+.container { /*This is the container style*/
   background: #34495e;
   margin: 50px;
   padding: 50px;
   border-radius: 12px;
 }
 
-.title {
+.title { /*Jus tot alignt the text to center*/
   text-align: center;
 }
 
-.title span {
+.title span { /*Color of span tag*/
   color: #fff;
 }
 .status2,
-.status-action {
+.status-action {/*Status styling*/
   display: flex;
   margin-top: 25px;
   font-size: 25px;
@@ -34,7 +34,7 @@ body {
   height: 30px;
 }
 
-.status span {
+.status span {/*Color of the status*/
   color: #fff;
 }
 
@@ -43,22 +43,22 @@ body {
 .playX,
 .playO,
 .playerXcomputer,
-.playerXplayer {
+.playerXplayer { /*wen hoving cursor will be a pointer*/
   cursor: pointer;
 }
-.start:hover {
+.start:hover {/*hover color start button*/
   color: #fff;
 }
-.reset:hover {
+.reset:hover {/*hover color reset button*/
   color: #fff;
 }
 .playX:hover,
 .playO:hover,
 .playerXcomputer:hover,
-.playerXplayer:hover {
-  color: #fff;
+.playerXplayer:hover {/*All the buttons hover color*/
+  color: #fff; 
 }
-.the-board {
+.the-board {/*styling of the play area*/
   background: #2c3e50;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -67,7 +67,7 @@ body {
   margin-top: 50px;
 }
 
-.game-Cell {
+.game-Cell {/*Styling for each cell of the play area*/
   background: #34495e;
   display: flex;
   justify-content: center;

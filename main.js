@@ -1,30 +1,26 @@
-//Needs Player x Computer function
-//Needs a Timer
-//ReeStyle css to add the timer button
-
 //HTML Elements querySelector
-let gameCells = document.querySelectorAll(".game-Cell");
-let resetButton = document.querySelector(".reset");
-let startButton = document.querySelector(".start");
-let playerX = document.querySelector(".playerXplayer");
-let playerX1 = document.querySelector(".playerXcomputer");
-let statusDiv = document.querySelector(".status");
-let playX = document.querySelector(".playX");
-let playO = document.querySelector(".playO");
+let gameCells = document.querySelectorAll(".game-Cell");  //Selects all the game cells
+let resetButton = document.querySelector(".reset"); // Select the reset button
+let startButton = document.querySelector(".start");// Select the start Button
+let playerX = document.querySelector(".playerXplayer"); // Choose player x player mode
+let playerX1 = document.querySelector(".playerXcomputer"); // Chose player x computer mode
+let statusDiv = document.querySelector(".status");//This is the status, who is playing the next move
+let playX = document.querySelector(".playX");//Player X
+let playO = document.querySelector(".playO");//Player O 
 
 //Variables
 let nextPlay = true;
-let gameStart = false;
-let timer;
-let interval = 0;
-let playMode = null;
-let win = null;
-let playerButton;
-let oponentButton;
-let clockStart;
+let gameStart = false; // Variable to start and end game
+let timer; // Timer variable
+let interval = 0; // instevals
+let playMode = null; 
+let win = null; // Win condition
+let playerButton; // PLayer button
+let oponentButton;// OponentButton
+let clockStart; // start of the clock
 
-//Win conditionArray
-let winCondition = [
+//Array that has all the win conditions
+let winCondition = [  
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -67,7 +63,7 @@ function checkWin() {
             for (let cellDiv of gameCells) {
               //this will clear all the cellDivs
               cellDiv.innerText = "";
-              cellDiv.innerText = "";
+              cellDiv.innerText = ""; 
             }
           }
         }
@@ -77,8 +73,6 @@ function checkWin() {
 }
 
 //------------------------The Game Function----------------------\\
-//Still needs to add the  Player vs Computer here.
-
 //event listener---Call this for starting the player x player
 function startGame() {
   if (gameStart === true) {
@@ -91,43 +85,43 @@ function startGame() {
           return;
         }
 
-        if (nextPlay) {
-          if (nextPlay === true) {
-            event.target.innerText = playerButton;
-            if (playerButton === "×") {
-              statusDiv.innerHTML = "○ is next";
-            } else if (playerButton === "○") {
-              statusDiv.innerHTML = "× is next";
+        if (nextPlay) { // Checks if next play is true
+          if (nextPlay === true) { // Set it to true
+            event.target.innerText = playerButton; //Event that will place a x or o depends what you choose
+            if (playerButton === "×") { //check who is next if x
+              statusDiv.innerHTML = "○ is next"; // status div will update to O
+            } else if (playerButton === "○") { //if O is next 
+              statusDiv.innerHTML = "× is next";// Status div will update to X
             }
 
-            nextPlay = !nextPlay;
+            nextPlay = !nextPlay; // This is to prevente a player to move twice 
           }
         } else {
-          if (nextPlay === false) {
-            event.target.innerText = oponentButton;
-            if (oponentButton === "○") {
-              statusDiv.innerHTML = "× is next";
+          if (nextPlay === false) { // if next play is false
+            event.target.innerText = oponentButton; // Oponent will mark
+            if (oponentButton === "○") { 
+              statusDiv.innerHTML = "× is next"; // Update the status div to X
             } else if (oponentButton === "×") {
-              statusDiv.innerHTML = "○ is next";
+              statusDiv.innerHTML = "○ is next"; // Update the status div to O
             }
 
-            nextPlay = !nextPlay;
+            nextPlay = !nextPlay; // This is to prevent a player to move twice
           }
         }
-        checkWin();
-      });
+        checkWin(); //function to check who won the game
+      }); 
     }
   } else if (gameStart === false) {
-    alert("NOOO Thats IMPOSSIBLEE!!!\nPlease Chose  X or O !");
+    alert("NOOO Thats IMPOSSIBLEE!!!\nPlease Chose  X or O !"); // If you dont choose X or O will print that
   }
 }
 
 //--------------------------------------- Buttons Events ---------------------------\\
 //Start Button to start the game
-startButton.addEventListener("click", countDown);
+startButton.addEventListener("click", countDown);  
 function countDown() {
   startButton.innerText = "Starting in...";
-  timer = setInterval(count, 1000);
+  timer = setInterval(count, 1000);//Interval of the countdown
 }
 
 //Event listener of vs Player vs Computer
