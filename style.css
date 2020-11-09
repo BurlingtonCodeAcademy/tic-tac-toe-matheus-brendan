@@ -1,0 +1,80 @@
+* { /*This is removing margin and padding of the page*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { /* Setting the body sytyle*/
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.container { /*This is the container style*/
+  background: #34495e;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 12px;
+}
+
+.title { /*Jus tot alignt the text to center*/
+  text-align: center;
+}
+
+.title span { /*Color of span tag*/
+  color: #fff;
+}
+.status2,
+.status-action {/*Status styling*/
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.status span {/*Color of the status*/
+  color: #fff;
+}
+
+.reset,
+.start,
+.playX,
+.playO,
+.playerXcomputer,
+.playerXplayer { /*wen hoving cursor will be a pointer*/
+  cursor: pointer;
+}
+.start:hover {/*hover color start button*/
+  color: #fff;
+}
+.reset:hover {/*hover color reset button*/
+  color: #fff;
+}
+.playX:hover,
+.playO:hover,
+.playerXcomputer:hover,
+.playerXplayer:hover {/*All the buttons hover color*/
+  color: #fff; 
+}
+.the-board {/*styling of the play area*/
+  background: #2c3e50;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+
+.game-Cell {/*Styling for each cell of the play area*/
+  background: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  font-size: 100px;
+  color: #fff;
+}

@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic Tac Toe</title>
-</head>
-<body>
-  <h1>Tic Tac Toe!</h1>
-  <div id='board'>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-    <div class='cell'></div>
-  </div>
-  <button id='start'>Start Game</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Tic-Tac-Toe</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+
+    <div class="container">
+      <h1 class="title">Tic <span>Tac</span> Toe</h1>  <!--Title-->
+      <div class="status-action">
+        <div class="status"> is next</div>   <!--Show who is next to play-->
+        <div class="start">Start</div> <!--Start Button-->
+        <div class="reset">Reset</div> <!--Reset Button-->
+     </div>
+     <div class="status2">  <!--Chosing to play against computer or player-->
+       <div class="playerXplayer">Player vs Player</div> 
+       <div class="playerXcomputer">Player vs Computer</div>
+    </div>
+    <div class="status2">
+      <div class="playX">Play With X</div>  <!-- Button to chose X to play-->
+      <div> 
+        <span id="hour"></span>  <!--Show the Hours-->
+        <span id="minutes"></span> <!--Show the minutes-->
+        <span id="seconds"></span> <!--Show the seconds-->
+      </div>
+      <div class="playO">Play With O</div> <!--Button to choose O to play-->
+   </div>
+    <div class="the-board"> <!--The Game board divs setup-->
+      <div id="0" class="game-Cell top-left"></div>   <!--TOP-LEFT DIV-->
+      <div id="1" class="game-Cell top-middle"></div> <!--TOP-MIDDLE DIV-->
+      <div id="2" class="game-Cell top-right"></div> <!--TOP-RIGHT DIV-->
+      <div id="3" class="game-Cell middle-left"></div> <!--MID-LEFT DIV-->
+      <div id="4" class="game-Cell middle-middle"></div> <!--MID-MID DIV-->
+      <div id="5" class="game-Cell middle-right"></div> <!--MID-RIGHT DIV-->
+      <div id="6" class="game-Cell bottom-left"></div> <!--BOTTON-LEFT DIV-->
+      <div id="7" class="game-Cell bottom-middle"></div> <!--BOTTON-MID DIV-->
+      <div id="8" class="game-Cell bottom-right"></div> <!--BOTTON-RIGHT DIV--->
+    </div>
+   </div>
+  </body>
+  <script src="main.js"></script> <!--Calling the main.js script-->
 </html>
+
